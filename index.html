@@ -1,0 +1,105 @@
+-<DOCTYPE! html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<style>
+
+  body {
+    background-color: lightblue;
+    }
+    p {
+    font-family: "Times New Roman", Times, serif;
+}
+
+}
+</style>
+<style>
+#button {
+    width: 6em;
+    border: 2px solid green;
+    background: #ffe;
+    border-radius: 5px;
+}
+a {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+a:hover {
+    color: red;
+    background: #eff;
+}
+</style>
+</head>
+<body>
+<h1>HR Wells</h1>
+<p>creating a safer workspace.</p>
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Engineering</button>
+  <div id="myDropdown1" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction(this, 1)">
+    <a href="#johnd"><div id="John Doe"><a href="John-Doe.html">John Doe</a></div></a>
+    <a href="#alexs"><div id="Alex Smith"><a href="Alex-Smith.html">Alex Smith</a></div></a>
+    <a href="#emmaw"><div id="Emma Watson"><a href="Emma-Watson.html">Emma Watson</a></div></a>
+    <a href="#georges"><div id="George Seo"><a href="George-Seo.html">George Seo</a></div></a>
+    <a href="#christyl"><div id="Christy Lee"><a href="Christy-Lee.html">Christy Lee</a></div></a>
+  </div>
+</div>
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">HR</button>
+  <div id="myDropdown2" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction(this, 2)">
+    <a href="#johnd"><div id="Alexis"><a href="Alexis.html">Alexis</a></div></a>
+    <a href="#alexs"><div id="Jess"><a href="Jess.html">Jess</a></div></a>
+    <a href="#emmaw"><div id="Taylor"><a href="Taylor.html">Taylor</a></div></a>
+    <a href="#georges"><div id="Fred"><a href="Fred.html">Fred</a></div></a>
+    <a href="#christyl"><div id="Chris"><a href="Chris.html">Chris</a></div></a>
+  </div>
+</div>
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Marketing</button>
+  <div id="myDropdown3" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction(this, 3)">
+    <a href="#johnd"><div id="Doe"><a href="Doe.html">Doe</a></div></a>
+    <a href="#alexs"><div id="Smith"><a href="Smith.html">Smith</a></div></a>
+    <a href="#emmaw"><div id="Watson"><a href="Watson.html">Watson</a></div></a>
+    <a href="#georges"><div id="Sara"><a href="Sara.html">Sara</a></div></a>
+    <a href="#christyl"><div id="Lee"><a href="Lee.html">Lee</a></div></a>
+  </div>
+</div>
+<!--
+<button type="button" onclick="alert(<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> </button> -->
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction(element, num) {
+    var input, filter, ul, li, a, i;
+    filter = element.value.toUpperCase();
+    div = document.getElementById("myDropdown" + num);
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>
